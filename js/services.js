@@ -63,7 +63,7 @@ myapp.factory('forms',['$http','$q',function($http,$q) {
     		}
     	};
     	$http(addReq).then(function successCallback(res){
-    		console.log("form added");
+    		console.log("form added",res);
     	},function errorCallback(err){
     		console.log(err);
     	});
