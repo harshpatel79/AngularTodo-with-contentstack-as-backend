@@ -63,7 +63,7 @@ myapp.factory('forms',['$http','$q',function($http,$q) {
     		}
     	};
     	$http(addReq).then(function successCallback(res){
-    		console.log("form added",res);
+    		console.log("form added res",res);
     	},function errorCallback(err){
     		console.log(err);
     	});
@@ -156,7 +156,8 @@ myapp.factory('forms',['$http','$q',function($http,$q) {
     		headers:credentials,
     	};
     	$http(addReq).then(function successCallback(res){
-    		 deferred.resolve(res);
+            console.log("res",res);
+    		deferred.resolve(res);
     	},function errorCallback(err){
     		console.log(err);
     	});
